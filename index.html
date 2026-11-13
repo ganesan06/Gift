@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#080b25"><title>A message for Madamji</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#080b25;color:#fff5df;font:16px system-ui,sans-serif}canvas,.moon{position:fixed;pointer-events:none}canvas{inset:0;width:100%;height:100%}.moon{top:9%;right:12%;width:clamp(65px,19vw,132px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 62% 30%,#bc9fba70 0 9%,transparent 11%),radial-gradient(circle at 28% 58%,#b39abe80 0 13%,transparent 15%),radial-gradient(circle at 73% 72%,#b39abe75 0 7%,transparent 9%),radial-gradient(circle at 34% 23%,#fffaf0,#dfc5d6 68%,#a18aaa);box-shadow:0 0 36px #ead2ff80,0 0 100px #b5a2ff60}main{position:relative;min-height:100svh;display:grid;place-items:center;text-align:center;padding:18px;overflow:hidden}h1,.bubble{font:normal clamp(36px,9vw,62px)/1.04 Georgia,serif;margin:16px 0 25px;text-shadow:0 3px 22px #09091d}button{cursor:pointer;border:1px solid #fff5df77;border-radius:99px;padding:13px 22px;background:#181532eb;color:#fff5df;font:600 16px system-ui;min-height:48px}button:focus-visible{outline:2px solid white;outline-offset:4px}.icon{font-size:42px;color:#ffe3ab;filter:drop-shadow(0 0 14px #ffe3ab)}[hidden]{display:none!important}#scene{width:min(100%,560px);align-self:center}.bubble{position:relative;z-index:1;display:table;margin:0 auto 10px;padding:13px 20px;background:#171432e8;border:1px solid #eed8ff80;border-radius:22px;font-size:clamp(27px,7vw,45px);animation:appear .45s both}.actions{position:relative;display:flex;justify-content:center;gap:8px;margin-top:8px}.intro{padding:30px 20px;border-radius:28px;background:#090b2380;backdrop-filter:blur(3px)}@keyframes appear{from{opacity:0;transform:translateY(10px)}}@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+.question{max-width:420px;margin:12px auto 16px;font-size:clamp(18px,5vw,24px)}.photo{position:relative;display:block;overflow:hidden;margin:12px auto;padding:0;border-radius:22px;width:min(100%,300px);width:min(100%,300px,31svh);aspect-ratio:576/1280}.photo img{display:block;width:100%;height:100%;object-fit:cover;filter:blur(16px);transform:scale(1.12);transition:filter .85s,transform .85s}.photo span{position:absolute;inset:0;display:grid;place-items:center;background:#100b35a0;transition:opacity .55s}.photo.clear img{filter:none;transform:none}.photo.clear span{opacity:0}.photo.clear{animation:magic .9s ease-out}@keyframes magic{40%{box-shadow:0 0 55px 12px #edd5ff}}@media(prefers-reduced-motion:reduce){.photo img,.photo span{transition:none}}.moon::after{content:"🎀";position:absolute;top:-12%;right:-10%;font-size:clamp(27px,8vw,54px);transform:rotate(20deg)}.choice[aria-pressed="true"]{background:#ecc7e5;color:#211132;border-color:#fff2ff}.moon.speaking{animation:magic .9s ease-out}.moon-clue{margin:10px auto 14px;font:normal clamp(20px,5vw,27px)/1.3 Georgia,serif;background:#171432f5;border:1px solid #eed8ff80;border-radius:20px;padding:12px 16px;max-width:440px;animation:appear .45s both}.moon-clue strong{display:block;font:600 14px system-ui;margin-bottom:5px}.actions{flex-wrap:wrap}.star-shower{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:3}.falling-star{position:absolute;top:-12vh;color:#ffe6a3;text-shadow:0 0 13px #ffd982;animation:fall 2s linear both}@keyframes fall{0%{transform:translate3d(0,0,0);opacity:0}12%{opacity:1}85%{opacity:1}100%{transform:translate3d(-18vw,123vh,0);opacity:0}}.celebration{position:relative;margin:auto;padding:28px 22px;max-width:480px;border-radius:28px;background:#171432ed;border:1px solid #ffe6a388;box-shadow:0 0 55px #b198ff55;animation:appear .5s both}.celebration p{line-height:1.5}.celebration time{color:#ffe6a3}body{overflow-x:clip}body.finale .sky{animation:sky-swirl 2s cubic-bezier(.3,.05,.2,1) both}body.finale .moon{animation:moon-glow 2s ease-out both}.celebration{isolation:isolate;background:linear-gradient(145deg,#30234c,#14152d 70%);animation:card-pop .85s cubic-bezier(.2,.75,.25,1.2) both}.celebration h1{margin-bottom:8px;color:#fff0cb}.celebration p{margin-bottom:0}.celebration::before{content:"";position:absolute;z-index:-1;inset:-18px;border:1px solid #ffe6a3;border-radius:40px;pointer-events:none;animation:ring 1.15s ease-out both}.celebration::after{content:"✦";position:absolute;right:10%;top:-24px;color:#ffdda1;font-size:34px;text-shadow:0 0 24px #ffd5ff;animation:sparkle 1.7s ease-in-out infinite alternate}.falling-star:nth-child(3n){color:#f3c0ff}.falling-star:nth-child(5n){color:#a5d9ff}@keyframes sky-swirl{0%{transform:rotate(0) scale(1)}16%{transform:rotate(-8deg) scale(1.4)}70%{transform:rotate(27deg) scale(2);filter:brightness(1.55) saturate(1.35)}100%{transform:rotate(0) scale(1);filter:none}}@keyframes moon-glow{45%{box-shadow:0 0 55px 15px #fff0c480,0 0 115px #e4a6ff}}@keyframes card-pop{0%{opacity:0;transform:translateY(28px) scale(.7)}65%{opacity:1}100%{transform:none}}@keyframes ring{from{transform:scale(.72);opacity:1}to{transform:scale(1.18);opacity:0}}@keyframes sparkle{from{transform:scale(.7) rotate(-16deg);opacity:.55}to{transform:scale(1.16) rotate(15deg);opacity:1}}.sky{position:fixed;inset:0;pointer-events:none;background:#080b25}.moon-face{position:absolute;inset:34% 19% 25%;display:flex;justify-content:space-around}.moon-face i{position:relative;width:24%;height:53%;border-radius:50%;background:#fffaf7;box-shadow:0 1px 3px #69435577}.moon-face i::after{content:"";position:absolute;inset:25%;border-radius:50%;background:#34213c;transform:translate(var(--look-x,0px),var(--look-y,2px))}.moon-face b{position:absolute;left:39%;bottom:2%;width:22%;height:23%;border-bottom:2px solid #794563;border-radius:50%}.moon-arm{position:absolute;top:65%;right:-18%;width:41%;height:16%;border-bottom:clamp(4px,1.5vw,8px) solid #dfc5d6;border-radius:0 0 85% 65%;transform:rotate(-23deg)}.moon-arm span{position:absolute;right:-28%;bottom:-7px;font-size:clamp(23px,7vw,43px);transform:rotate(23deg);filter:drop-shadow(0 0 8px #77e99866)}.ambient-stars{position:fixed;inset:0;overflow:hidden;pointer-events:none}.ambient-stars span{position:absolute;top:-28px;width:2px;height:28px;border-radius:100%;background:linear-gradient(transparent,#f3e1ff);filter:drop-shadow(0 0 4px #c4afff);opacity:0;animation:drift-star 10s linear infinite}@keyframes drift-star{0%{transform:translate3d(0,0,0) rotate(24deg)}15%,75%{opacity:.7}100%{opacity:0;transform:translate3d(-28vw,110vh,0) rotate(24deg)}}@media(prefers-reduced-motion:reduce){.ambient-stars{display:none}}.moon#moon-gift{z-index:2;pointer-events:auto;padding:0;overflow:visible}.gift-note{position:absolute;right:0;top:calc(100% + 10px);width:max-content;max-width:180px;padding:8px 12px;border:1px solid #eed8ff80;border-radius:14px;background:#171432f5;color:#fff5df;font:600 13px/1.3 system-ui}.gift-note::before{content:"";position:absolute;right:24px;top:-6px;width:9px;height:9px;transform:rotate(45deg);background:#171432;border-left:1px solid #eed8ff80;border-top:1px solid #eed8ff80}.moon.opened{pointer-events:none}.moon.opened .gift-note{display:none}#final-gift{width:100%;height:100%;max-width:none;max-height:none;margin:0;padding:20px;border:0;color:#fff3d7;background:radial-gradient(ellipse at 50% 45%,#49315e,#0b0b22 72%);overflow:auto}#final-gift::backdrop{background:#0b0b22}.gift-stage{min-height:100%;display:grid;place-content:center;justify-items:center;text-align:center}.gift-close{position:absolute;top:16px;right:16px;padding:8px 16px}#unwrap{padding:0 8px 12px;background:transparent;border:0}.gift-art{position:relative;display:block;width:min(72vw,54vh,390px);aspect-ratio:1;margin:auto;perspective:700px;isolation:isolate}.gift-base,.gift-lid,.gift-top,.gift-side,.gift-interior{position:absolute;display:block}.gift-base,.gift-lid{background:linear-gradient(90deg,transparent 43%,#aa722f 43%,#ffe8a8 46%,#dba653 54%,#98602a 57%,transparent 57%),repeating-linear-gradient(115deg,#ffffff12 0 1px,transparent 1px 5px),linear-gradient(145deg,#bc5479,#661e4f 80%);box-shadow:inset 0 2px 3px #fff4d44d,inset 0 -10px 18px #350b364d}.gift-base{inset:47% 23% 15% 7%;border-radius:0 0 5px 5px;z-index:2}.gift-side{inset:47% 7% 15% 77%;background:linear-gradient(120deg,#863b62,#3e173e);transform:skewY(-32deg);transform-origin:left top;z-index:2}.gift-interior{inset:33% 7% 46% 7%;background:radial-gradient(ellipse at 55% 75%,#9a5c43,#221021 70%);clip-path:polygon(19% 0,100% 0,82% 100%,0 100%);z-index:1}.gift-lid{inset:40% 22% 48% 5%;border-radius:5px;transform-style:preserve-3d;transform-origin:85% 0;z-index:4}.gift-top{inset:-107% -23% 100% 0;background:linear-gradient(90deg,transparent 35%,#c08b4a 35%,#ffdda0 42%,#e4b66b 48%,transparent 48%),linear-gradient(145deg,#e58baa,#8f3e72);clip-path:polygon(18% 0,100% 0,81% 100%,0 100%)}.gift-lid::after{content:"";position:absolute;left:100%;top:0;width:23%;height:100%;transform:skewY(-32deg);transform-origin:left top;background:linear-gradient(110deg,#9d4777,#5d2552)}.gift-ribbon{position:absolute;left:34%;top:10%;font-size:clamp(38px,14vw,82px);line-height:1;z-index:5;filter:drop-shadow(0 6px 5px #2e122d88)}.gift-spark{position:absolute;left:50%;top:42%;opacity:0;color:#fff1ac;font-size:clamp(34px,12vw,74px);text-shadow:0 0 32px #ffd580;z-index:6}.gift-art::after{content:"";position:absolute;inset:77% 4% 8%;border-radius:50%;background:#080412;filter:blur(14px);z-index:-1}.unwrapped .gift-ribbon{animation:untie .48s ease-out both}.unwrapped .gift-lid{animation:lift .8s .16s cubic-bezier(.16,.75,.28,1) both}.unwrapped .gift-spark{animation:gift-light .85s .26s ease-out both}.unwrapped .unwrap-label{visibility:hidden}#gift-delivery{margin:0;padding:14px 18px;border:1px solid #ffe29a80;border-radius:18px;background:#241935;color:#fff0bd;font:normal clamp(20px,5vw,28px)/1.35 Georgia,serif;animation:card-pop .5s both}@keyframes untie{to{transform:translate(90px,-50px) rotate(42deg);opacity:0}}@keyframes lift{to{transform:translate(-15%,-110%) rotateX(48deg) rotateZ(-17deg)}}@keyframes gift-light{30%{opacity:1}to{transform:translate(-50%,-120%) scale(2);opacity:0}}@media(prefers-reduced-motion:reduce){.unwrapped .gift-ribbon{opacity:0}.unwrapped .gift-lid{transform:translate(-15%,-110%) rotateX(48deg) rotateZ(-17deg)}}@media(pointer:fine){body,button,dialog{cursor:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20d%3D%22M10%2010L27%2027%22%20stroke%3D%22%23321d45%22%20stroke-width%3D%227%22%20stroke-linecap%3D%22round%22%2F%3E%3Cpath%20d%3D%22M10%2010L27%2027%22%20stroke%3D%22%23df9cf4%22%20stroke-width%3D%224%22%20stroke-linecap%3D%22round%22%2F%3E%3Cpath%20d%3D%22M8%200L10.5%205.5L16%208L10.5%2010.5L8%2016L5.5%2010.5L0%208L5.5%205.5Z%22%20fill%3D%22%23ffe7a4%22%20stroke%3D%22%23664166%22%2F%3E%3C%2Fsvg%3E") 8 8,auto}}.wand-spark{position:fixed;pointer-events:none;z-index:10;color:#ffe4a1;text-shadow:0 0 10px #f3aaff;font-size:23px;animation:wand-spark .55s ease-out both}@keyframes wand-spark{from{transform:translate(-50%,-50%) scale(.6)}to{transform:translate(-50%,-130%) rotate(30deg) scale(1.5);opacity:0}}#magic-wand{position:fixed;top:10%;right:calc(12% + clamp(65px,19vw,132px) + 10px);z-index:2;padding:4px;width:48px;font-size:26px;animation:wand-float 1.8s ease-in-out infinite alternate}#magic-wand[aria-pressed=true]{box-shadow:0 0 26px #f2b5ff}body.magic-on .moon-face{animation:wand-float 2s ease-in-out infinite alternate}@keyframes wand-float{to{transform:translateY(-6px) rotate(8deg)}}@media(pointer:fine){body.magic-on,body.magic-on button,body.magic-on dialog{cursor:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20d%3D%22M10%2010L27%2027%22%20stroke%3D%22%23321d45%22%20stroke-width%3D%227%22%20stroke-linecap%3D%22round%22%2F%3E%3Cpath%20d%3D%22M10%2010L27%2027%22%20stroke%3D%22%23df9cf4%22%20stroke-width%3D%224%22%20stroke-linecap%3D%22round%22%2F%3E%3Cpath%20d%3D%22M8%200L10.5%205.5L16%208L10.5%2010.5L8%2016L5.5%2010.5L0%208L5.5%205.5Z%22%20fill%3D%22%23ff9cff%22%20stroke%3D%22%23664166%22%2F%3E%3C%2Fsvg%3E") 8 8,auto}}.wand-spark.dust{color:#f3b7ff;font-size:16px}body:not(.magic-on),body:not(.magic-on) button,body:not(.magic-on) dialog{cursor:default}#wand-intro{position:fixed;inset:0;z-index:8;display:grid;align-content:center;justify-items:center;gap:14px;text-align:center;padding:18px;background:radial-gradient(ellipse at center,#32254d68,#080b25df);overflow:auto}#wand-intro p{font:normal clamp(24px,7vw,42px) Georgia,serif;margin:0}.opening-moon{position:relative;font-size:clamp(115px,42vw,260px);line-height:1.1;filter:drop-shadow(0 0 32px #f8d9a7aa);animation:wand-float 2s ease-in-out infinite alternate}.opening-moon span{position:absolute;right:0;top:0;font-size:.27em}#wand-intro #magic-wand{position:static;width:auto;padding:12px 22px;animation:card-pop .6s both}#wand-intro.powering .opening-moon{animation:charge .85s both}#wand-intro.powering #magic-wand{animation:charge .85s both}@keyframes box-opening{to{transform:scale(1.32) rotate(-10deg);opacity:0}}@keyframes charge{45%{transform:scale(1.16);filter:drop-shadow(0 0 40px #f5c2ff) brightness(1.55)}100%{transform:none}}#wand-intro{backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px)}#wand-box{background:none;border:0;padding:0 12px 8px}.chest{position:relative;display:block;width:min(66vw,290px);height:104px;perspective:520px;filter:drop-shadow(0 12px 14px #0009)}.chest span{position:absolute;display:block}.chest-front,.chest-lid,.chest-side{background:repeating-linear-gradient(2deg,#ffcd820d 0 2px,transparent 2px 7px),linear-gradient(145deg,#663624,#2c1517);border:3px solid #b18951;box-shadow:inset 0 0 12px #0008}.chest-front{inset:47% 13% 9% 0;border-radius:4px 4px 9px 9px}.chest-side{inset:47% 0 9% 86%;transform:skewY(-28deg);transform-origin:left top;background-color:#211015;filter:brightness(.7)}.chest-lid{inset:18% 10% 49% -2%;border-radius:50% 38% 7px 7px;transform-origin:50% 0;transform-style:preserve-3d}.chest-lock{left:44%;top:62%;width:26px;height:28px;background:linear-gradient(145deg,#ffe1a1,#8b5929);border-radius:5px;color:#402013}.chest-interior{inset:27% 11% 42% 1%;border-radius:50%;color:#fff0b4;font-size:28px;opacity:0;background:#734b83;box-shadow:0 0 42px 10px #e5a4ff}.chest-label{display:inline-block;padding:8px 16px;border:1px solid #b18951;border-radius:20px;background:#20162f}.box-opening .chest-lid{animation:chest-open .75s ease-out both}.box-opening .chest-interior{animation:chest-light .78s ease-out both}@keyframes chest-open{to{transform:translateY(-12px) rotateX(115deg)}}@keyframes chest-light{35%,100%{opacity:1}}#gift-delivery{margin:0 0 14px;animation:gift-message-rise .75s cubic-bezier(.2,.75,.25,1.15) both}@keyframes gift-message-rise{from{opacity:0;transform:translateY(30px) scale(.92)}to{opacity:1;transform:none}}.moon:not(.opened) .gift-note{transform-origin:85% 0;animation:gift-invite .7s cubic-bezier(.2,.75,.25,1.2) both,gift-invite-glow 2.4s ease-in-out .7s 3}.moon:not(.opened) .gift-note::after{content:"✦";position:absolute;right:-9px;bottom:-8px;color:#ffe8a8;text-shadow:0 0 12px #ffd3ff;animation:gift-invite-spark 1s ease-out both}@keyframes gift-invite{from{opacity:0;transform:translateY(-10px) scale(.65)}to{opacity:1;transform:none}}@keyframes gift-invite-glow{50%{box-shadow:0 0 22px #d0aaff88;border-color:#ffe8b8}}@keyframes gift-invite-spark{from{opacity:0;transform:scale(.2)}55%{opacity:1;transform:scale(1.3)}to{opacity:1;transform:none}}#moon-rocket{position:fixed;left:var(--landing-x);top:var(--landing-y);z-index:3;pointer-events:none;font-size:clamp(28px,7vw,46px);filter:drop-shadow(0 5px 9px #ffaa62);animation:rocket-arrival 1.35s cubic-bezier(.42,0,.45,1) both}@keyframes rocket-arrival{0%{transform:translate(var(--launch-x),65vh) scale(.7);opacity:0}15%{opacity:1}83%{transform:translate(-20px,25px) scale(1.15);opacity:1}100%{transform:translate(-50%,-50%) scale(.3);opacity:0}}@media(max-width:480px) and (orientation:portrait){
+main{padding:88px 14px 18px}
+.moon{top:16px;right:8%;width:66px}
+.gift-note{max-width:min(170px,46vw);white-space:normal}
+#magic-wand{max-width:100%}
+#wand-intro{padding:16px;gap:10px}
+.opening-moon{font-size:clamp(92px,37vw,155px)}
+.bubble{max-width:100%;overflow-wrap:anywhere;padding:11px 14px}
+.moon-clue{padding:10px 12px}
+.celebration{width:100%;padding:20px 14px}
+.celebration h1{font-size:clamp(29px,9vw,42px)}
+#final-gift{padding:58px 14px 18px}
+.gift-art{width:min(76vw,44svh,320px)}
+#gift-delivery{max-width:100%;font-size:clamp(18px,5.5vw,24px)}
+}</style></head><body><canvas class="sky" aria-hidden="true"></canvas><div class="ambient-stars" aria-hidden="true"></div><button type="button" class="moon opened" id="moon-gift" disabled aria-label="Tap me to see your gift!"><span class="moon-face"><i></i><i></i><b></b></span><span class="moon-arm"><span>🍀</span></span><span class="gift-note">Tap me to see your gift! 🎁</span></button><section id="wand-intro" aria-label="A wand from the moon"><div class="opening-moon" aria-hidden="true">🌝<span>🎀</span></div><p id="moon-line" aria-live="polite">I have something for you.</p><button id="wand-box" type="button">
+  <span class="chest" aria-hidden="true"><span class="chest-side"></span><span class="chest-front"></span><span class="chest-interior">✦</span><span class="chest-lid"><span class="chest-lock">✧</span></span></span>
+  <span class="chest-label">Open the wand box</span>
+</button><button id="magic-wand" type="button" aria-pressed="false" hidden>🪄 Take the wand</button></section><span id="moon-rocket" aria-hidden="true" hidden>🚀</span><main inert><div class="intro" id="intro"><div class="icon" aria-hidden="true">✉</div><h1>You have<br>a message</h1><button id="open">Open message</button></div><div id="scene" hidden><div class="bubble" id="line" tabindex="-1">Are you Madamji?</div><p id="question" class="question" tabindex="-1" hidden>Do you remember what makes today special? I bet you don’t, do you?</p><button id="photo" class="photo" aria-label="Reveal photo" hidden><img src="first-chat.jpeg" alt=""><span>Tap to reveal ✨</span></button><div id="clue" class="moon-clue" tabindex="-1" hidden><strong>🌙 The moon says</strong>A year ago, someone sent this screenshot to check if it was really you.</div><div class="actions"><button id="yes">Yes</button><button id="special" hidden>Yes</button><button id="hint" hidden>Hint</button><button class="choice" aria-pressed="false" hidden>I got it</button><button class="choice" aria-pressed="false" hidden>I still don’t know</button></div></div><section id="celebration" class="celebration" tabindex="-1" hidden><time datetime="11-14">November 14</time><h1>One year since we first talked ✨</h1><p>We started talking on this day a year ago.</p><p>Our first year is just the beginning. I’ll always be with you. 🎀</p></section></main><dialog id="final-gift" aria-label="Your anniversary gift"><div class="gift-stage"><button type="button" class="gift-close" aria-label="Close gift">✕</button>
+  <p id="gift-delivery" tabindex="-1" hidden>Your gift will reach you in about 30–35 minutes. ✨</p>
+  <button id="unwrap" type="button" aria-label="Unwrap your gift">
+    <span class="gift-art" aria-hidden="true"><span class="gift-interior"></span><span class="gift-base"></span><span class="gift-side"></span><span class="gift-lid"><span class="gift-top"></span></span><span class="gift-ribbon">🎀</span><span class="gift-spark">✦</span></span>
+    <span class="unwrap-label">Tap to unwrap</span>
+  </button>
+
+</div></dialog><div id="star-shower" class="star-shower" aria-hidden="true" hidden></div>
+<script>
+const canvas = document.querySelector('canvas');
+const ctx = canvas.getContext('2d');
+function drawSky() {
+  const w = canvas.width = innerWidth;
+  const h = canvas.height = innerHeight;
+  const sky = ctx.createLinearGradient(0,0,w,h);
+  sky.addColorStop(0,'#06091e');
+  sky.addColorStop(.58,'#15143b');
+  sky.addColorStop(1,'#08091d');
+  ctx.fillStyle = sky;
+  ctx.fillRect(0,0,w,h);
+  let seed = 811;
+  const rand = () => ((seed = (Math.imul(1664525,seed)+1013904223) >>> 0)/4294967296);
+  for (let i=0;i<38;i++) {
+    const x = i*w/37;
+    const y = h*(.83-.62*i/37)+Math.sin(i*.4)*h*.035;
+    const radius = Math.max(w,h)*(.13+rand()*.10);
+    const cloud = ctx.createRadialGradient(x,y,0,x,y,radius);
+    cloud.addColorStop(0,i%3===0?'#d17abb32':'#666bc438');
+    cloud.addColorStop(1,'#6650ad00');
+    ctx.fillStyle = cloud;
+    ctx.fillRect(x-radius,y-radius,2*radius,2*radius);
+  }
+  for (let i=0;i<2500;i++) {
+    const x = rand()*w;
+    const y = i<500 ? rand()*h : h*(.83-.62*x/w)+(rand()+rand()+rand()-1.5)*h*.17;
+    const size = rand();
+    ctx.globalAlpha = .14+rand()*.7;
+    ctx.fillStyle = i%5===0?'#ffd5e9':'#e5e7ff';
+    ctx.beginPath();
+    ctx.arc(x,y,size>.989?2.3:.25+size*.85,0,Math.PI*2);
+    ctx.fill();
+    if (size>.995) {
+      ctx.fillRect(x-5,y-.5,10,1);
+      ctx.fillRect(x-.5,y-6,1,12);
+    }
+  }
+  ctx.globalAlpha = 1;
+}
+drawSky();
+addEventListener('resize',drawSky);
+const ambientStars = document.querySelector('.ambient-stars');
+for (let i = 0; i < 12; i++) {
+  const star = document.createElement('span');
+  star.style.left = (i * 37 % 112) + '%';
+  star.style.animationDelay = (-i * 1.9) + 's';
+  star.style.animationDuration = (8 + i % 5) + 's';
+  ambientStars.append(star);
+}
+const intro = document.querySelector('#intro');
+const scene = document.querySelector('#scene');
+const line = document.querySelector('#line');
+const question = document.querySelector('#question');
+const special = document.querySelector('#special');
+const photo = document.querySelector('#photo');
+const hint = document.querySelector('#hint');
+const clue = document.querySelector('#clue');
+const moon = document.querySelector('.moon');
+function lookAt(event) {
+  const bounds = moon.getBoundingClientRect();
+  const dx = event.clientX - bounds.left - bounds.width / 2;
+  const dy = event.clientY - bounds.top - bounds.height / 2;
+  const distance = Math.max(50, Math.hypot(dx, dy));
+  const travel = bounds.width * .025;
+  moon.style.setProperty('--look-x', dx / distance * travel + 'px');
+  moon.style.setProperty('--look-y', dy / distance * travel + 'px');
+}
+addEventListener('pointermove', lookAt, {passive:true});
+addEventListener('pointerdown', lookAt, {passive:true});
+const choices = document.querySelectorAll('.choice');
+const shower = document.querySelector('#star-shower');
+const celebration = document.querySelector('#celebration');
+function launchMoonRocket(reducedMotion) {
+  const showGift = () => {
+    moon.classList.remove('opened');
+    moon.disabled = false;
+  };
+  if (reducedMotion) {
+    showGift();
+    return;
+  }
+  const rocket = document.querySelector('#moon-rocket');
+  const bounds = moon.getBoundingClientRect();
+  const landingX = bounds.left + bounds.width / 2;
+  rocket.style.setProperty('--landing-x', landingX + 'px');
+  rocket.style.setProperty('--landing-y', bounds.top + bounds.height / 2 + 'px');
+  rocket.style.setProperty('--launch-x', (innerWidth * .16 - landingX) + 'px');
+  rocket.hidden = false;
+  setTimeout(() => {
+    rocket.hidden = true;
+    showGift();
+  }, 1350);
+}
+function celebrate() {
+  scene.hidden = true;
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reducedMotion) {
+    document.body.classList.add('finale');
+    const stars = document.createDocumentFragment();
+    for (let i = 0; i < 125; i++) {
+      const star = document.createElement('span');
+      star.className = 'falling-star';
+      star.textContent = i % 6 === 0 ? '✦' : '·';
+      star.style.left = Math.random() * 120 + 'vw';
+      star.style.top = Math.random() * 106 - 12 + 'vh';
+      star.style.fontSize = 10 + Math.random() * 20 + 'px';
+      stars.append(star);
+    }
+    shower.append(stars);
+    shower.hidden = false;
+  }
+  setTimeout(() => {
+    shower.hidden = true;
+    shower.replaceChildren();
+    celebration.hidden = false;
+    launchMoonRocket(reducedMotion);
+    celebration.focus();
+  }, reducedMotion ? 0 : 2000);
+}
+choices.forEach(choice => choice.addEventListener('click', celebrate, {once:true}));
+function show() {
+  choices.forEach(choice => {
+    choice.hidden = true;
+    choice.setAttribute('aria-pressed','false');
+  });
+  question.hidden = true;
+  special.hidden = true;
+  photo.hidden = true;
+  photo.classList.remove('clear');
+  photo.setAttribute('aria-label','Reveal photo');
+  intro.hidden = true;
+  scene.hidden = false;
+  line.hidden = false;
+  line.textContent = 'Are you Madamji?';
+  document.querySelector('#yes').hidden = false;
+  line.focus({preventScroll:true});
+}
+document.querySelector('#yes').addEventListener('click', event => {
+  line.hidden = true;
+  event.currentTarget.hidden = true;
+  question.hidden = false;
+  special.hidden = false;
+  question.focus({preventScroll:true});
+});
+special.addEventListener('click', () => {
+  special.hidden = true;
+  question.hidden = true;
+  photo.hidden = false;
+  photo.focus();
+});
+photo.addEventListener('click', () => {
+  photo.classList.add('clear');
+  if (clue.hidden) {
+    line.textContent = 'Any guesses? Tap Hint for a clue.';
+    line.hidden = false;
+    hint.hidden = false;
+  }
+  photo.setAttribute('aria-label','First chat photo revealed');
+});
+hint.addEventListener('click', () => {
+  hint.hidden = true;
+  line.hidden = true;
+  clue.hidden = false;
+  moon.classList.add('speaking');
+  choices.forEach(choice => { choice.hidden = false; });
+  clue.focus();
+});
+document.querySelector('#open').addEventListener('click',show);
+moon.addEventListener('click', () => {
+  const gift = document.querySelector('#final-gift');
+  gift.showModal();
+  const target = document.querySelector('#unwrap').disabled ? gift.querySelector('.gift-close') : document.querySelector('#unwrap');
+  target.focus();
+});
+document.querySelector('.gift-close').addEventListener('click', () => document.querySelector('#final-gift').close());
+document.querySelector('#unwrap').addEventListener('click', event => {
+  const box = event.currentTarget;
+  box.classList.add('unwrapped');
+  box.disabled = true;
+  const delivery = document.querySelector('#gift-delivery');
+  const delay = matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 980;
+  setTimeout(() => {
+    delivery.hidden = false;
+    if (delivery.closest('dialog').open) delivery.focus();
+  }, delay);
+}, {once:true});
+addEventListener('pointerdown', event => {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const spark = document.createElement('span');
+  spark.className = 'wand-spark';
+  spark.textContent = '✦';
+  spark.setAttribute('aria-hidden', 'true');
+  spark.style.left = event.clientX + 'px';
+  spark.style.top = event.clientY + 'px';
+  (document.querySelector('dialog[open]') || document.body).append(spark);
+  setTimeout(() => spark.remove(), 550);
+}, {passive:true});
+const wand = document.querySelector('#magic-wand');
+let magicPoint;
+for (const type of ['pointermove', 'pointerdown']) {
+  addEventListener(type, event => { magicPoint = [event.clientX, event.clientY]; }, {passive:true});
+}
+const opening = document.querySelector('#wand-intro');
+const box = document.querySelector('#wand-box');
+const moonLine = document.querySelector('#moon-line');
+const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+box.addEventListener('click', () => {
+  box.disabled = true;
+  box.classList.add('box-opening');
+  setTimeout(() => {
+    box.hidden = true;
+    moonLine.textContent = 'Take this magic wand!';
+    wand.hidden = false;
+    wand.focus();
+  }, reducedMotion.matches ? 0 : 850);
+}, {once:true});
+wand.addEventListener('click', () => {
+  wand.disabled = true;
+  opening.classList.add('powering');
+  moonLine.textContent = 'Your wand is powering up…';
+  setTimeout(() => {
+    document.body.classList.add('magic-on');
+    opening.hidden = true;
+    document.querySelector('main').inert = false;
+    document.querySelector('#open').focus();
+  }, reducedMotion.matches ? 0 : 850);
+  const bounds = wand.getBoundingClientRect();
+  magicPoint ||= [bounds.left + bounds.width / 2, bounds.top + bounds.height / 2];
+  setInterval(() => {
+    if (!opening.hidden || document.hidden || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const dust = document.createElement('span');
+    dust.className = 'wand-spark dust';
+    dust.textContent = '✧';
+    dust.setAttribute('aria-hidden','true');
+    dust.style.left = magicPoint[0] + Math.random() * 28 - 14 + 'px';
+    dust.style.top = magicPoint[1] + Math.random() * 24 - 12 + 'px';
+    (document.querySelector('dialog[open]') || document.body).append(dust);
+    setTimeout(() => dust.remove(), 550);
+  }, 110);
+});
+</script></body></html>
